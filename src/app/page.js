@@ -1,3 +1,4 @@
+import CaseStudy from "@/components/CaseStudy/CaseStudy";
 import Menu from "@/components/Header/Menu/Menu";
 import TopNav from "@/components/Header/TopNav/TopNav";
 import PaymentGateway from "@/components/PaymentGateway/PaymentGateway";
@@ -17,6 +18,7 @@ export default function Home() {
         <Slider />
         <Service data={serviceData} />
         <PaymentGateway />
+        <CaseStudy />
       </main>
     </div>
   );
