@@ -1,5 +1,7 @@
 import Menu from "@/components/Header/Menu/Menu";
 import TopNav from "@/components/Header/TopNav/TopNav";
+import Service from "@/components/Service/Service";
+import Slider from "@/components/Slider/Slider";
 
 export default function Home() {
   return (
@@ -8,6 +10,11 @@ export default function Home() {
         <TopNav />
         <Menu />
       </header>
+
+      <main className="content">
+        <Slider />
+        <Service />
+      </main>
     </div>
   );
 }
