@@ -2,6 +2,7 @@ import CaseStudy from "@/components/CaseStudy/CaseStudy";
 import Menu from "@/components/Header/Menu/Menu";
 import TopNav from "@/components/Header/TopNav/TopNav";
 import PaymentGateway from "@/components/PaymentGateway/PaymentGateway";
+import PaymentGatewayTwo from "@/components/PaymentGateway/PaymentGatewayTwo";
 import Service from "@/components/Service/Service";
 import Slider from "@/components/Slider/Slider";
 import serviceData from "@/data/service.json";
@@ -19,6 +20,7 @@ export default function Home() {
         <Service data={serviceData} />
         <PaymentGateway />
         <CaseStudy />
+        <PaymentGatewayTwo />
       </main>
     </div>
   );
