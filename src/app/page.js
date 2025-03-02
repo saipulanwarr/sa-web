@@ -1,3 +1,4 @@
+import Blog from "@/components/Blog/Blog";
 import CaseStudy from "@/components/CaseStudy/CaseStudy";
 import FormRequest from "@/components/FormRequest/FormRequest";
 import Menu from "@/components/Header/Menu/Menu";
@@ -8,6 +9,7 @@ import Service from "@/components/Service/Service";
 import Slider from "@/components/Slider/Slider";
 import Testimonial from "@/components/Testimonial/Testimonial";
 import serviceData from "@/data/service.json";
+import blogData from "@/data/blog.json";
 
 export default function Home() {
   return (
@@ -25,6 +27,7 @@ export default function Home() {
         <PaymentGatewayTwo />
         <FormRequest />
         <Testimonial />
+        <Blog data={blogData} />
       </main>
     </div>
   );
