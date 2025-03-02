@@ -10,6 +10,7 @@ import Slider from "@/components/Slider/Slider";
 import Testimonial from "@/components/Testimonial/Testimonial";
 import serviceData from "@/data/service.json";
 import blogData from "@/data/blog.json";
+import Partner from "@/components/Partner/Partner";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <FormRequest />
         <Testimonial />
         <Blog data={blogData} />
+        <Partner className="lg:mt-[100px] sm:mt-16 mt-10" />
       </main>
     </div>
   );
