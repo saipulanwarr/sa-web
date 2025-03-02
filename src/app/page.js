@@ -11,6 +11,7 @@ import Testimonial from "@/components/Testimonial/Testimonial";
 import serviceData from "@/data/service.json";
 import blogData from "@/data/blog.json";
 import Partner from "@/components/Partner/Partner";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -29,8 +30,11 @@ export default function Home() {
         <FormRequest />
         <Testimonial />
         <Blog data={blogData} />
-        <Partner className="lg:mt-[100px] sm:mt-16 mt-10" />
       </main>
+      <Partner className="lg:mt-[100px] sm:mt-16 mt-10" />
+      <footer id="footer">
+        <Footer />
+      </footer>
     </div>
   );
 }

@@ -10,7 +10,7 @@ const TopNav = () => {
             <div className="location flex items-center max-lg:hidden">
               <Icon.MapPin className="text-white text-xl" />
               <span className="ml-2 caption1 text-white">
-                160 Boradway 12th floor, New York
+                999 Chizead 12th floor, SA
               </span>
             </div>
             <div className="mail lg:ml-7 flex items-center">
