@@ -6,6 +6,7 @@ import PaymentGateway from "@/components/PaymentGateway/PaymentGateway";
 import PaymentGatewayTwo from "@/components/PaymentGateway/PaymentGatewayTwo";
 import Service from "@/components/Service/Service";
 import Slider from "@/components/Slider/Slider";
+import Testimonial from "@/components/Testimonial/Testimonial";
 import serviceData from "@/data/service.json";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         <CaseStudy />
         <PaymentGatewayTwo />
         <FormRequest />
+        <Testimonial />
       </main>
     </div>
   );
