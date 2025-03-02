@@ -1,4 +1,5 @@
 import CaseStudy from "@/components/CaseStudy/CaseStudy";
+import FormRequest from "@/components/FormRequest/FormRequest";
 import Menu from "@/components/Header/Menu/Menu";
 import TopNav from "@/components/Header/TopNav/TopNav";
 import PaymentGateway from "@/components/PaymentGateway/PaymentGateway";
@@ -21,6 +22,7 @@ export default function Home() {
         <PaymentGateway />
         <CaseStudy />
         <PaymentGatewayTwo />
+        <FormRequest />
       </main>
     </div>
   );
