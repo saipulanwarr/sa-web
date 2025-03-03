@@ -6,7 +6,10 @@ const ServiceItem = ({ data, number }) => {
     <div className="service-item p-8 bg-white rounded-lg border border-line hover-box-shadow">
       <Link
         className="service-item-main h-full"
-        href={`/service/service-details/`}
+        href={"/service/service-detail/[slug]"}
+        as={`/service/service-details/${data.title
+          .toLowerCase()
+          .replace(/ /g, "-")}`}
       >
         <div className="heading flex items-center justify-between">
           <i className={`${data.icon} text-blue md:text-6xl text-5xl`}></i>

@@ -59,7 +59,7 @@ const Menu = () => {
               >
                 <Link
                   className="nav-link text-title flex items-center gap-1"
-                  href="/services"
+                  href="/service"
                 >
                   <span>Our Services</span>
                 </Link>
@@ -143,7 +143,7 @@ const Menu = () => {
                 <li className="nav-item-mobile h-full flex-column gap-2 pt-2 pl-3 pr-3 pb-2 pointer">
                   <a
                     className="nav-link-mobile flex items-center justify-between"
-                    href="/services"
+                    href="/service"
                   >
                     <span className="body2 font-bold">Our Services</span>
                   </a>
