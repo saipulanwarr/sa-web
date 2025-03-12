@@ -1,13 +1,33 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import BlogItem from "./Item/BlogItem";
+import { API_BASE_URL } from "@/config/config";
 
-const Blog = ({ data }) => {
+const Blog = () => {
+  const [blog, setBlog] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchItem = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/blog`);
+        const data = await response.json();
+        setBlog(data);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchItem();
+  }, []);
+
   return (
     <section className="list-blog three-col lg:mt-[100px] sm:mt-16 mt-10 pb-[100px]">
       <div className="container">
         <h3 className="heading3 text-center">Latest News</h3>
         <div className="list grid lg:grid-cols-3 sm:grid-cols-2 gap-8 md:mt-10 mt-6">
-          {data.slice(0, 3).map((item, index) => (
+          {blog.slice(0, 3).map((item, index) => (
             <BlogItem data={item} key={index} />
           ))}
         </div>
