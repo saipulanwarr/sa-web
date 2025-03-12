@@ -2,7 +2,7 @@ import React from "react";
 
 const Counter = ({ className }) => {
   return (
-    <div className="container bg-slate-100 rounded-md pt-8">
+    <div className="container bg-slate-100 rounded-md pt-8 pb-10">
       <div className={`counter-block ${className}`}>
         <div className="grid xl:grid-cols-4 grid-cols-2 gap-y-8">
           <div className="item">
