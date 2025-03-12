@@ -6,8 +6,8 @@ const ServiceItem = ({ data, number }) => {
     <div className="service-item p-8 bg-white rounded-lg border border-line hover-box-shadow">
       <Link
         className="service-item-main h-full"
-        href={"/service/service-detail/[slug]"}
-        as={`/service/service-details/${data.title
+        href={"/service/service-details/[slug]"}
+        as={`/service/service-details/${data.service_name
           .toLowerCase()
           .replace(/ /g, "-")}`}
       >
@@ -18,9 +18,9 @@ const ServiceItem = ({ data, number }) => {
           </div>
         </div>
         <div className="heading6 hover:text-blue duration-300 mt-6">
-          {data.title}
+          {data.service_name}
         </div>
-        <div className="text-secondary mt-2">{data.desc}</div>
+        <div className="text-secondary mt-2">{data.service_short}</div>
       </Link>
     </div>
   );

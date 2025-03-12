@@ -8,7 +8,6 @@ import PaymentGatewayTwo from "@/components/PaymentGateway/PaymentGatewayTwo";
 import Service from "@/components/Service/Service";
 import Slider from "@/components/Slider/Slider";
 import Testimonial from "@/components/Testimonial/Testimonial";
-import serviceData from "@/data/service.json";
 import blogData from "@/data/blog.json";
 import Partner from "@/components/Partner/Partner";
 import Footer from "@/components/Footer/Footer";
@@ -23,7 +22,7 @@ export default function Home() {
 
       <main className="content">
         <Slider />
-        <Service data={serviceData} />
+        <Service />
         <PaymentGateway />
         <CaseStudy />
         <PaymentGatewayTwo />
