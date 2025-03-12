@@ -1,9 +1,29 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as Icon from "@phosphor-icons/react/dist/ssr";
+import { API_BASE_URL } from "@/config/config";
 
 const Footer = () => {
+  const [footer, setFooter] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchItem = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/sitesetting`);
+        const data = await response.json();
+        setFooter(data[0]);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchItem();
+  }, []);
+
   return (
     <div className="footer-block bg-[#0f1e33] pt-[60px]">
       <div className="container">
@@ -14,22 +34,22 @@ const Footer = () => {
                 width={4000}
                 height={4000}
                 className="footer-logo w-[145px]"
-                src="/images/Logowhite.png"
+                src="/images/LogoWhite.png"
               />
               <div className="text caption1 text-white">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Tenetur quia nisi dolorem officia necessitatibus, amet
-                aspernatur? Quisquam cumque autem.
+                {footer.footer_message}
               </div>
 
               <div className="list-social flex items-center gap-2">
-                <Link
-                  className="item rounded-full w-7 h-7 border-2 border-gray flex items-center justify-center"
-                  href="https://facebook.com/"
-                  target="_blank"
-                >
-                  <i className="icon-facebook text-xs"></i>
-                </Link>
+                {footer.facebook && (
+                  <Link
+                    className="item rounded-full w-7 h-7 border-2 border-gray flex items-center justify-center"
+                    href={footer.facebook}
+                    target="_blank"
+                  >
+                    <i className="icon-facebook text-sm"></i>
+                  </Link>
+                )}
 
                 <Link
                   className="item rounded-full w-7 h-7 border-2 border-gray flex items-center justify-center"
@@ -47,13 +67,15 @@ const Footer = () => {
                   <i className="icon-twitter text-xs"></i>
                 </Link>
 
-                <Link
-                  className="item rounded-full w-7 h-7 border-2 border-gray flex items-center justify-center"
-                  href="https://youtube.com/"
-                  target="_blank"
-                >
-                  <i className="icon-youtube text-xs"></i>
-                </Link>
+                {footer.youtube && (
+                  <Link
+                    className="item rounded-full w-7 h-7 border-2 border-gray flex items-center justify-center"
+                    href={footer.youtube}
+                    target="_blank"
+                  >
+                    <i className="icon-youtube text-xs"></i>
+                  </Link>
+                )}
               </div>
             </div>
           </div>
@@ -189,16 +211,16 @@ const Footer = () => {
               </div>
               <div className="mt-3 flex items-start">
                 <div className="text">
-                  <div className="caption2 text-surface text-white">
+                  <div className="cpation2 text-surface text-white">
                     Need Help? 24/7
                   </div>
-                  <div className="fw-700 text-white mt-1">123-32131-1231</div>
+                  <div className="fw-700 text-white mt-1">{footer.phone}</div>
                 </div>
               </div>
 
               <div className="locate mt-3 flex items-center">
                 <div className="caption1 text-surface text-white">
-                  999 88th st, Easy Chicaga. SA
+                  {footer.address}
                 </div>
               </div>
 
@@ -216,19 +238,19 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-line"></div>
+        <div className="border-line"> </div>
         <div className="footer-bottom flex items-center justify-between pt-3 pb-3">
           <div className="left-block flex items-center">
             <div className="copy-right text-surface caption1 text-white">
-              @2024 SATech. All Right Reserved
+              @2024 SATech. All Rights Reserved
             </div>
           </div>
 
           <div className="nav-link flex items-center gap-3 text-white">
             <a href="#" className="text-surface caption1 hover-underline">
-              Terms of services
+              Terms of Services
             </a>
-            <span className="text-surface caption1"> | </span>
+            <span className="text-surface caption1 "> | </span>
             <a href="#" className="text-surface caption1 hover-underline">
               Privacy Policy
             </a>
