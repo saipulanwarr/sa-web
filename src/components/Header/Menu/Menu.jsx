@@ -17,14 +17,15 @@ const Menu = () => {
       <div className={`header-menu bg-white ${fixedHeader ? "fixed" : ""}`}>
         <div className="container flex items-center justify-between h-20">
           <Link className="menu-left-block" href="/">
-            <Image
+            {/* <Image
               src={`/images/Logo.png`}
               width={2000}
               height={1000}
               alt="logo"
               priority={true}
               className="w-[149px] max-sm:w-[132px]"
-            />
+            /> */}
+            <span className="text-4xl font-bold">SA</span>
           </Link>
           <div className="menu-center-block h-full">
             <ul className="menu-nav flex items-center xl:gap-2 h-full">

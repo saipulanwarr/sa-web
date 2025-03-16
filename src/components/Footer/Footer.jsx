@@ -30,12 +30,13 @@ const Footer = () => {
         <div className="flex max-lg:flex-col max-lg:items-start gap-y-10 pb-10">
           <div className="lg:w-1/4">
             <div className="footer-company-infor flex flex-col justify-between gap-5">
-              <Image
+              {/* <Image
                 width={4000}
                 height={4000}
                 className="footer-logo w-[145px]"
                 src="/images/LogoWhite.png"
-              />
+              /> */}
+              <span className="text-4xl font-bold text-white">SA</span>
               <div className="text caption1 text-white">
                 {footer.footer_message}
               </div>
@@ -242,7 +243,7 @@ const Footer = () => {
         <div className="footer-bottom flex items-center justify-between pt-3 pb-3">
           <div className="left-block flex items-center">
             <div className="copy-right text-surface caption1 text-white">
-              @2024 SATech. All Rights Reserved
+              @2024 SA. All Rights Reserved
             </div>
           </div>
 
